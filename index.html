@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日心靈雞湯</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8ffae 0%, #43c6ac 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Noto Sans TC', sans-serif;
+            margin: 0;
+        }
+        .container {
+            background: rgba(255,255,255,0.85);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31,38,135,0.2);
+            padding: 40px 30px;
+            max-width: 400px;
+            text-align: center;
+        }
+        .quote {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .refresh-btn {
+            background: #43c6ac;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 24px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .refresh-btn:hover {
+            background: #2e8b7a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="quote" id="quote">AI 對話</div>
+        <div id="chat-window" style="height:220px;overflow-y:auto;background:#f7f7f7;border-radius:10px;padding:10px 8px;margin-bottom:16px;font-size:1rem;color:#222;text-align:left;max-width:350px;margin-left:auto;margin-right:auto;"></div>
+        <form id="chat-form" style="display:flex;gap:8px;max-width:350px;margin-left:auto;margin-right:auto;">
+            <input id="user-input" type="text" placeholder="請輸入訊息..." style="flex:1;padding:8px 12px;border-radius:6px;border:1px solid #ccc;font-size:1rem;outline:none;" autocomplete="off" required />
+            <button class="refresh-btn" type="submit">送出</button>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
